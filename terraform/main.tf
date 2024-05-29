@@ -4,7 +4,7 @@ module "test_workload" {
   control_tower_parameters = {
     AccountEmail              = "aws.account+test-workloads@thyia.co.uk"
     AccountName               = "Test"
-    ManagedOrganizationalUnit = "AFT" # Workloads / SDLC
+    ManagedOrganizationalUnit = "AFT ou-bxkz-m42s40fl" # Workloads / SDLC
     SSOUserEmail              = "sam@mettle-studio.com"
     SSOUserFirstName          = "Sam"
     SSOUserLastName           = "Parkinson"
@@ -28,7 +28,7 @@ module "test_savvas" {
   control_tower_parameters = {
     AccountEmail              = "svezyridis@gmail.com"
     AccountName               = "Test-Savvas"
-    ManagedOrganizationalUnit = "AFT" # Workloads / SDLC
+    ManagedOrganizationalUnit = "AFT ou-bxkz-m42s40fl" # Workloads / SDLC
     SSOUserEmail              = "savvas@mettle-studio.com"
     SSOUserFirstName          = "Savvas"
     SSOUserLastName           = "Vezyridis"
