@@ -1,8 +1,8 @@
-module "test_workload" {
+module "test_workload2" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "aws.account+test-workloads@thyia.co.uk"
+    AccountEmail              = "aws.account+test-workloads2@thyia.co.uk"
     AccountName               = "Test"
     ManagedOrganizationalUnit = "AFT" # Workloads / SDLC
     SSOUserEmail              = "sam@mettle-studio.com"
@@ -22,11 +22,11 @@ module "test_workload" {
   account_customizations_name = "workload"
 }
 
-module "test_savvas" {
+module "test_savvas2" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "svezyridis@gmail.com"
+    AccountEmail              = "aws.account+test-workloads2-savvas@thyia.co.uk"
     AccountName               = "Test-Savvas"
     ManagedOrganizationalUnit = "AFT" # Workloads / SDLC
     SSOUserEmail              = "savvas@mettle-studio.com"
