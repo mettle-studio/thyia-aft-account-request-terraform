@@ -1,34 +1,10 @@
-module "test_workload2" {
+module "dns-account" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
-    AccountEmail              = "aws.account+test-workloads2@thyia.co.uk"
-    AccountName               = "Test"
-    ManagedOrganizationalUnit = "AFT" # Workloads / SDLC
-    SSOUserEmail              = "sam@mettle-studio.com"
-    SSOUserFirstName          = "Sam"
-    SSOUserLastName           = "Parkinson"
-  }
-
-  account_tags = {}
-
-  change_management_parameters = {
-    change_requested_by = "Sam Parkinson"
-    change_reason       = "Deploying a test workload account"
-  }
-
-  custom_fields = {}
-
-  account_customizations_name = "workload"
-}
-
-module "test_savvas2" {
-  source = "./modules/aft-account-request"
-
-  control_tower_parameters = {
-    AccountEmail              = "aws.account+test-workloads2-savvas@thyia.co.uk"
-    AccountName               = "Test-Savvas"
-    ManagedOrganizationalUnit = "AFT" # Workloads / SDLC
+    AccountEmail              = "aws.account+aft-dns@thyia.co.uk"
+    AccountName               = "DNS"
+    ManagedOrganizationalUnit = "AFT"
     SSOUserEmail              = "savvas@mettle-studio.com"
     SSOUserFirstName          = "Savvas"
     SSOUserLastName           = "Vezyridis"
@@ -38,10 +14,38 @@ module "test_savvas2" {
 
   change_management_parameters = {
     change_requested_by = "Savvas Vezyridis"
-    change_reason       = "Deploying a test workload account"
+    change_reason       = "Deploying a DNS account"
   }
 
   custom_fields = {}
 
-  account_customizations_name = "workload-savvas"
+  account_customizations_name = "dns-account"
+}
+
+module "development-account" {
+  source = "./modules/aft-account-request"
+
+  control_tower_parameters = {
+    AccountEmail              = "aws.account+aft-development@thyia.co.uk"
+    AccountName               = "Development"
+    ManagedOrganizationalUnit = "AFT"
+    SSOUserEmail              = "savvas@mettle-studio.com"
+    SSOUserFirstName          = "Savvas"
+    SSOUserLastName           = "Vezyridis"
+  }
+
+  account_tags = {
+    Environment = "Development"
+  }
+
+  change_management_parameters = {
+    change_requested_by = "Savvas Vezyridis"
+    change_reason       = "Deploying a Development account"
+  }
+
+  custom_fields = {
+    Environment = "Development"
+  }
+
+  account_customizations_name = "development-account"
 }
