@@ -3,7 +3,7 @@ module "dns-account" {
 
   control_tower_parameters = {
     AccountEmail              = "aws.account+aft-dns@thyia.co.uk"
-    AccountName               = "DNS"
+    AccountName               = "DNS-AFT"
     ManagedOrganizationalUnit = "AFT"
     SSOUserEmail              = "savvas@mettle-studio.com"
     SSOUserFirstName          = "Savvas"
@@ -27,7 +27,7 @@ module "development-account" {
 
   control_tower_parameters = {
     AccountEmail              = "aws.account+aft-development@thyia.co.uk"
-    AccountName               = "Development"
+    AccountName               = "Development-AFT"
     ManagedOrganizationalUnit = "AFT"
     SSOUserEmail              = "savvas@mettle-studio.com"
     SSOUserFirstName          = "Savvas"
