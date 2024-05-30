@@ -1,4 +1,4 @@
-module "dns-account" {
+module "dns-account-aft" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
@@ -22,7 +22,7 @@ module "dns-account" {
   account_customizations_name = "dns-account"
 }
 
-module "development-account" {
+module "development-account-aft" {
   source = "./modules/aft-account-request"
 
   control_tower_parameters = {
